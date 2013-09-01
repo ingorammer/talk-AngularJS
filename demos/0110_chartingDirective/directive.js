@@ -9,7 +9,7 @@ angular.module("test").directive("myChart", function () {
          chartData: "&"
       },
       replace: true,
-      template: "<canvas class='my-chart-wrapper'></canvas>",
+      template: "<canvas class='my-chart-wrapper' ></canvas>",
       link: function (scope, element, attrs) {
 
          if (attrs.width){
