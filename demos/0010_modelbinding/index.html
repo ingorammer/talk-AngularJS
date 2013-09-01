@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS Demos</title>
+    <link rel=stylesheet href="/lib/bootstrap/css/bootstrap.css">
+    <link rel=stylesheet href="/demos/app.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div ng-app="test" ng-controller="DemoController" ng-cloak>
+
+
+                <!-- demo starts here -->
+
+
+                <div class="page-header">
+                    <h1>Model Binding</h1>
+                </div>
+
+                <form>
+                    <div class="form-group">
+                        <label for="userFirstName">First name</label>
+                        <input type="text" ng-model="user.firstName" class="form-control" id="userFirstName">
+                    </div>
+                    <div class="form-group">
+                        <label for="userLastName">Last name</label>
+                        <input type="text" ng-model="user.lastName" class="form-control" id="userLastName">
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            Full name: {{user.firstName}} {{user.lastName}}
+                        </label>
+                    </div>
+
+                </form>
+
+
+                <!-- demo ends here -->
+
+
+            </div>
+        </div>
+    </div>
+    <div class="row demofooter">
+        <hr>
+        <div class="col-md-12">
+            <a href="/">Back to demo list</a>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/lib/angular/angular.js"></script>
+<script src="demo.js"></script>
+</html>

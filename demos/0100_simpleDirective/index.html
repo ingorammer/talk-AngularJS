@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS Demos</title>
+    <link rel=stylesheet href="/lib/bootstrap/css/bootstrap.css">
+    <link rel=stylesheet href="/demos/app.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div ng-app="test" ng-controller="DemoController" ng-cloak>
+
+                <!-- demo starts here -->
+
+                <div class="page-header">
+                    <h1>Simple Directive - Basics for an Expander</h1>
+                </div>
+
+                <my-expander title="First Test">
+                    This is my first test content within an expander.<br><br>
+                    <em>Right now, this is of course not really an expander. But we'll come back to this later on,
+                        ok? ;-)</em>
+                </my-expander>
+
+                <my-expander title="Second Test">
+                    This is my second content area in the expander.
+                </my-expander>
+
+
+                <!-- alternate ways to put it
+
+
+<div my-expander title="Using a DIV with a custom attribute">
+    This is more content.
+</div>
+
+<div data-my-expander title="Using a DIV with a (valid) custom data-attribute">
+        This is more content.
+</div>
+
+<div class="my-expander" title="Using a DIV, flagged with an regular CSS class (which is still handled by the directive!)">
+        This is more content.
+</div>
+
+-->
+
+                <!-- demo ends here -->
+
+            </div>
+        </div>
+    </div>
+    <div class="row demofooter">
+        <hr>
+        <div class="col-md-12">
+            <a href="/">Back to demo list</a>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/lib/angular/angular.js"></script>
+<script src="demo.js"></script>
+<script src="directive.js"></script>
+</html>
