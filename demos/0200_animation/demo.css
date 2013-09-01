@@ -1,0 +1,54 @@
+.animated-item.ng-enter,
+.animated-item.ng-leave {
+    -webkit-transition:0.2s linear all;
+    -moz-transition:0.2s linear all;
+    -o-transition:0.2s linear all;
+    transition:0.2s linear all;
+
+    height: 0px;
+}
+
+.animated-item.ng-enter,
+.animated-item.ng-leave.ng-leave-active {
+    opacity:0;
+    height: 0px;
+}
+.animated-item.ng-leave,
+.animated-item.ng-enter.ng-enter-active {
+    opacity:1;
+    height: 20px;
+}
+
+/* ----- */
+
+.animated-item td
+{
+    overflow: hidden;
+}
+
+.animated-table {
+    display:block;
+    width:328px;
+}
+
+.animated-table tr {
+    display:block;
+    overflow: hidden;
+    height: 37px;
+}
+
+.animated-table td {
+    display:block;
+    float:left;
+    overflow: hidden;
+}
+
+.animated-table .name
+{
+    width:200px;
+}
+
+.animated-table .area
+{
+    width:120px;
+}
