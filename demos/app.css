@@ -21,8 +21,17 @@
 
 /** For my-expander directive */
 
-.my-expander-collapsed .my-expander-content {
-    display:none;
+.my-expander-iconlink {
+    color: white;
+    cursor: pointer;
+}
+
+.my-expander-iconlink:hover{
+    color: white;
+}
+
+.my-expander-iconlink:active{
+    color: white;
 }
 
 .my-expander-wrapper {
