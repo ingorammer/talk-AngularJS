@@ -16,7 +16,7 @@
             <div class="col-md-12">
 
                 <div class="page-header">
-                    <h1>Filtering, Sorting, Formatting</h1>
+                    <h1>Filtering, Sorting, Formatting, Applying</h1>
                 </div>
 
                 <form>
@@ -39,6 +39,8 @@
                         <th class="text-right">
                             <a href="" ng-click="sort.predicate='area'; sort.reverse=!sort.reverse">Area</a>
                         </th>
+                        <th class="text-right">
+                        </th>
                     </tr>
                     <tr ng-repeat="state in states|filter: query|orderBy:sort.predicate:sort.reverse">
                         <td>
@@ -46,6 +48,9 @@
                         </td>
                         <td class="text-right">
                             {{state.area|number:2}}
+                        </td>
+                        <td class="text-right">
+                            <button class="btn btn-primary btn-xs" ng-click="doSomething(state)">Do Something!</button>
                         </td>
                     </tr>
                 </table>

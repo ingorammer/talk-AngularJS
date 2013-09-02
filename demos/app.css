@@ -52,3 +52,33 @@
     padding:10px;
 }
 
+/* --- bootstrap validation with angular ---- */
+
+input.ng-invalid,
+textarea.ng-invalid,
+select.ng-invalid{
+    color: #b94a48 !important;
+    border-color: #ee5f5b !important;
+}
+
+input.ng-invalid,
+textarea.ng-invalid,
+select.ng-invalid {
+    border-color: #e9322d !important;
+    -webkit-box-shadow: 0 0 6px #f8b9b7 !important;
+    -moz-box-shadow: 0 0 6px #f8b9b7 !important;
+    box-shadow: 0 0 6px #f8b9b7 !important;
+}
+
+input.ng-invalid-required.ng-pristine
+{
+    border-color: #cccccc !important;
+    -webkit-box-shadow: 0 0 0 !important;
+    -moz-box-shadow: 0 0 0 #f8b9b7 !important;
+    box-shadow: 0 0 0 #f8b9b7 !important;
+}
+
+input.ng-invalid-required
+{
+    background-color: #cae8ff !important;
+}

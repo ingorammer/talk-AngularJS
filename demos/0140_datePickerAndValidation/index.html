@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS Demos</title>
+    <link rel=stylesheet href="/lib/bootstrap/css/bootstrap.css">
+    <link rel=stylesheet href="/demos/app.css">
+    <link rel=stylesheet href="/lib/jquery-ui/css/ui-lightness/jquery-ui-1.10.3.custom.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div ng-app="test" ng-controller="DemoController" ng-cloak>
+
+
+                <!-- demo starts here -->
+
+
+                <div class="page-header">
+                    <h1>DatePicker and Validation</h1>
+                </div>
+
+
+                <form class="form-horizontal" name="newUserForm">
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="userName">Name</label>
+
+                        <div class="col-md-4">
+                            <input required type="text" ng-model="user.name" class="form-control" id="userName">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="userPhone">Phone Number</label>
+                        <div class="col-md-4">
+                            <input type="text" ng-model="user.phone" class="form-control" id="userPhone">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="userEmail">Email</label>
+                        <div class="col-md-4">
+                            <input required type="email" ng-model="user.email" class="form-control" id="userEmail">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="userDateOfBirth">Date of Birth</label>
+                        <div class="col-md-4">
+                            <input type="text" my-datepicker ng-model="user.dateOfBirth" class="form-control" id="userDateOfBirth">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label"></label>
+                        <div class="col-md-4">
+                            <button class="btn btn-default" ng-click="continue()" ng-disabled="newUserForm.$invalid">Continue</button>
+                            <button class="btn" ng-click="cancel()">Cancel</button>
+                        </div>
+                    </div>
+                </form>
+
+
+                <!-- demo ends here -->
+
+
+            </div>
+        </div>
+    </div>
+    <div class="row demofooter">
+        <hr>
+        <div class="col-md-12">
+            <a href="/">Back to demo list</a>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/lib/jquery/jquery.js"></script>
+<script src="/lib/jquery-ui/js/jquery-ui-1.10.3.custom.js"></script>
+<script src="/lib/angular/angular.js"></script>
+<script src="/lib/globalize/globalize.js"></script>
+<script src="legacyHelpers.js"></script>
+<script src="demo.js"></script>
+<script src="directive.js"></script>
+</html>

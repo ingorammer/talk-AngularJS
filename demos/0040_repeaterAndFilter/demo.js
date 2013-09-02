@@ -23,4 +23,29 @@ function DemoController($scope) {
       {name: "Schleswig-Holstein", area: 15799.57},
       {name: "Thüringen", area: 16172.50}
    ];
+
+   $scope.doSomething = function (state) {
+
+      alert("Selected state is '" + state.name + "'");
+
+      // option #1: Changing some value
+      //       state.name = "ABC";
+
+
+      // option #2: Changing some value at a later time (doesn't work as expected!)
+      /*
+       window.setTimeout(function(){
+       state.name = "AAA";
+       }, 500);
+       */
+
+
+      // option #3: applying the delayed change
+      /*window.setTimeout(function(){
+       $scope.$apply(function(){
+       state.name = "AAA";
+       });
+       }, 500);
+       */
+   }
 }
