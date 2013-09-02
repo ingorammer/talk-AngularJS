@@ -1,4 +1,4 @@
-angular.module("test").directive('myDatepicker', function ($parse) {
+angular.module("demo").directive('myDatepicker', function ($parse) {
 
 
    return {

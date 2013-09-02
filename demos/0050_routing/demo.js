@@ -1,4 +1,4 @@
-var mod = angular.module("test", ["ngRoute"]).config(function ($routeProvider) {
+var mod = angular.module("demo", ["ngRoute"]).config(function ($routeProvider) {
 
    $routeProvider
       .when("/", { templateUrl: "Start.html" }) // we don't need a controller for this first one

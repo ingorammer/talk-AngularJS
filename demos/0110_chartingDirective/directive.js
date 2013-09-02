@@ -1,6 +1,6 @@
 // extend predefined module
 
-angular.module("test").directive("myChart", function () {
+angular.module("demo").directive("myChart", function () {
 
 
    return {

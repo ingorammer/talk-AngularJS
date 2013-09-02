@@ -9,8 +9,6 @@
 <style>[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {display: none !important;}</style>
 <body>
 <div class="container">
-
-
     <!-- demo starts here -->
 
 
@@ -19,13 +17,14 @@
             <div class="col-md-12">
 
                 <div class="page-header">
-                    <h1>Charting with a Directive</h1>
+                    <h1>Services, Server and JSON</h1>
                 </div>
 
                 <form>
                     <div class="form-group">
                         <label for="queryName">Filter</label>
                         <input type="text" ng-model="query.name" class="form-control" id="queryName">
+
                     </div>
                 </form>
             </div>
@@ -34,20 +33,16 @@
 
         <div class="row">
             <div class="col-md-6">
-                <table class="table table-striped resultArea">
+                <table class="table table-striped resultArea" >
                     <tr>
-                        <th></th>
                         <th>
-                            <a href="" ng-click="sort.predicate='name'; sort.reverse=!sort.reverse">Name</a>
+                           <a href="" ng-click="sort.predicate='name'; sort.reverse=!sort.reverse">Name</a>
                         </th>
                         <th class="text-right">
                             <a href="" ng-click="sort.predicate='area'; sort.reverse=!sort.reverse">Area</a>
                         </th>
                     </tr>
-                    <tr ng-repeat="state in states|filter: query|orderBy:sort.predicate:sort.reverse">
-                        <td style="width:16px">
-                            <div style="background-color:{{state.color}};width:16px;height:16px;margin-top:3px"></div>
-                        </td>
+                    <tr ng-repeat="state in data.states|filter: query|orderBy:sort.predicate:sort.reverse">
                         <td>
                             {{state.name}}
                         </td>
@@ -57,24 +52,14 @@
                     </tr>
                 </table>
             </div>
-
-            <div class="col-md-6">
-                    <my-chart chart-data="states|filter: query|orderBy:sort.predicate:sort.reverse" width="400" height="400"></my-chart>
-            </div>
-
         </div>
 
         <!-- demo ends here -->
 
+
     </div>
     <div class="row demofooter">
         <div class="description">
-            This demo shows:
-            <ul>
-                <li>ng-repeat</li>
-                <li>input filtering (with ng-repeat's "|filter:...")</li>
-                <li>output filtering (with "|number:2")</li>
-            </ul>
         </div>
         <hr>
         <div class="col-md-12">
@@ -84,7 +69,7 @@
 </div>
 </body>
 <script src="/lib/angular/angular.js"></script>
-<script src="/lib/chartjs/Chart.js"></script>
+<script src="/lib/angular/angular-resource.js"></script>
 <script src="demo.js"></script>
-<script src="directive.js"></script>
+<script src="service.js"></script>
 </html>

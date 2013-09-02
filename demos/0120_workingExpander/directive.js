@@ -1,5 +1,5 @@
 // extend predefined module
-var mod = angular.module("test");
+var mod = angular.module("demo");
 
 mod.directive("myExpander", function () {
    return {

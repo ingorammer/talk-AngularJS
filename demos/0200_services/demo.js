@@ -1,4 +1,4 @@
-var mod = angular.module("test", []);
+var mod = angular.module("demo", []);
 
 function DemoController($scope, service2, service4){
    $scope.demo = function() {

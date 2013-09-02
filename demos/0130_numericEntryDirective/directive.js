@@ -1,5 +1,5 @@
 // extend predefined module
-angular.module("test").directive('myFloat', function ($parse) {
+angular.module("demo").directive('myFloat', function ($parse) {
    return {
       restrict: "A",
       require: "ngModel",

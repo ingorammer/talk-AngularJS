@@ -1,4 +1,4 @@
-var mod = angular.module("test", ["ngAnimate"]);
+var mod = angular.module("demo", ["ngAnimate"]);
 
 function DemoController($scope) {
    $scope.query = {name: ""};

@@ -1,4 +1,4 @@
-var mod = angular.module("test", []);
+var mod = angular.module("demo", []);
 
 function DemoController($scope) {
    $scope.continue = function () {

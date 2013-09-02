@@ -1,6 +1,6 @@
 // alternative declaration instead of just "function StateListController"
 
-angular.module("test").controller("StateListController", function ($scope, $location, $routeParams) {
+angular.module("demo").controller("StateListController", function ($scope, $location, $routeParams) {
    $scope.input = {filter: $routeParams.query};
    $scope.query = {name: $routeParams.query};
    $scope.sort = {predicate: "name", reverse: false};
