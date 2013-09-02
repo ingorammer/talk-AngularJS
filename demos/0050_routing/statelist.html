@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-md-12">
+
+        <form class="form-inline">
+            <div class="form-group">
+                <input type="text" ng-model="input.filter" class="form-control" placeholder="Search Term (f.e. 'Ba')" id="queryName">
+            </div>
+            <button type="submit" class="btn btn-default" ng-click="applyFilter()">Search</button>
+        </form>
+    </div>
+</div>
+<div class="row-spacer"></div>
+
+<div class="row" ng-show="query.name">
+    <div class="col-md-6">
+        <table class="table table-striped resultArea">
+            <tr>
+                <th>
+                    <a href="" ng-click="sort.predicate='name'; sort.reverse=!sort.reverse">Name</a>
+                </th>
+                <th class="text-right">
+                    <a href="" ng-click="sort.predicate='area'; sort.reverse=!sort.reverse">Area</a>
+                </th>
+            </tr>
+            <tr ng-repeat="state in states|filter: query|orderBy:sort.predicate:sort.reverse">
+                <td>
+                    <a href="#/state/{{state.id}}">{{state.name}}</a>
+                </td>
+                <td class="text-right">
+                    {{state.area|number:2}}
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

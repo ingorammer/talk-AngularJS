@@ -19,6 +19,15 @@
     border-radius: 4px 4px 0 0;
 }
 
+.route-container {
+    border: 1px solid olivedrab;
+    padding:20px;
+}
+
+.row-spacer{
+    margin-top:10px;
+}
+
 /** For my-expander directive */
 
 .my-expander-iconlink {

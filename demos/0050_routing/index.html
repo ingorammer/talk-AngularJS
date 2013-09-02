@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS Demos</title>
+    <link rel=stylesheet href="/lib/bootstrap/css/bootstrap.css">
+    <link rel=stylesheet href="/demos/app.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+<div class="container">
+    <!-- demo starts here -->
+
+
+    <div ng-app="test" ng-controller="DemoController" ng-cloak>
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="page-header">
+                    <h1>Client-Side Routing</h1>
+                </div>
+                <div class="route-container">
+                    <ng-view></ng-view>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- demo ends here -->
+
+    </div>
+    <div class="row demofooter">
+        <div class="col-md-12">
+            <a href="/">Back to demo list</a>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/lib/angular/angular.js"></script>
+<script src="/lib/angular/angular-route.js"></script>
+<script src="demo.js"></script>
+<script src="statelist.js"></script>
+<script src="statecontroller.js"></script>
+</html>

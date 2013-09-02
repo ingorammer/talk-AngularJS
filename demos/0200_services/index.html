@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS Demos</title>
+    <link rel=stylesheet href="/lib/bootstrap/css/bootstrap.css">
+    <link rel=stylesheet href="/demos/app.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div ng-app="test" ng-controller="DemoController" ng-cloak>
+
+
+                <!-- demo starts here -->
+
+
+                <div class="page-header">
+                    <h1>Services and Dependency Injection</h1>
+                </div>
+
+                <button class="btn btn-default" ng-click="demo()">Demo #1</button>
+                <button class="btn btn-default" ng-click="demo2()">Demo #2</button>
+
+                <!-- demo ends here -->
+
+
+            </div>
+        </div>
+    </div>
+    <div class="row demofooter">
+        <hr>
+        <div class="col-md-12">
+            <a href="/">Back to demo list</a>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/lib/angular/angular.js"></script>
+<script src="demo.js"></script>
+<script src="service.js"></script>
+</html>
