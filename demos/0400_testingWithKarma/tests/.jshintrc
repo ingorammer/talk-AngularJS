@@ -1,0 +1,21 @@
+{
+   "bitwise": true,
+   "camelcase": false,
+   "curly": true,
+   "eqeqeq": true,
+   "es3": true,
+   "forin": true,
+   "immed": true,
+   "latedef": true,
+   "newcap": true,
+   "noarg": true,
+   "noempty": true,
+   "nonew": true,
+   "regexp": true,
+   "undef": true,
+   "strict": true,
+   "browser": true,
+   "devel": true,
+   "jquery": true,
+   "globals": ["_", "describe", "beforeEach", "afterEach", "it", "inject", "module", "expect", "angular", "$app", "defaultData", "appMocks"]
+}
