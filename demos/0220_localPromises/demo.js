@@ -6,15 +6,18 @@ function DemoController($scope, statesService) {
 
    $scope.data = statesService.getAllStates();
 
+   statesService.getAllStates().then(function (data) {
+      $scope.data = data;
+   });
 
    // if more control is required:
-/*
-   statesService.getAllStates().then(function (data) {
-      alert("Received Data!");
-   }, function (reason) {
-      alert("Received error: " + reason);
-   }, function (update) {
-      alert("Received progress update: " + update);
-   })
-*/
+   /*
+    statesService.getAllStates().then(function (data) {
+    alert("Received Data!");
+    }, function (reason) {
+    alert("Received error: " + reason);
+    }, function (update) {
+    alert("Received progress update: " + update);
+    })
+    */
 }

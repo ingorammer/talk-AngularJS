@@ -2,11 +2,26 @@ var mod = angular.module("demo", ["ngRoute"]).config(function ($routeProvider) {
 
    $routeProvider
       .when("/", { templateUrl: "Start.html" }) // we don't need a controller for this first one
-      .when("/states/:query", { templateUrl: "statelist.html", controller: "StateListController" })
+      .when("/states/:query?", { templateUrl: "statelist.html", controller: "StateListController" })
       .when("/state/:id", { templateUrl: "state.html", controller: "StateController" })
       .otherwise({ redirectTo: "/" });
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // this is the root controller for the whole application. It defines the shared data in the parent scope

@@ -6,3 +6,4 @@ function DemoController($scope, statesService) {
 
    $scope.data = statesService.getAllStates();
 }
+
