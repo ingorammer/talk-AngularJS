@@ -1,4 +1,5 @@
 angular.module("demo").factory("statesService", function ($rootScope, $q) {
+   "use strict";
 
    var stateDummyData = {states: [
       {name: "Test #1", area: 42},
@@ -18,6 +19,6 @@ angular.module("demo").factory("statesService", function ($rootScope, $q) {
 
          return def.promise;
       }
-   }
+   };
 
 });

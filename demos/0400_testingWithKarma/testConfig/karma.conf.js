@@ -5,8 +5,8 @@ module.exports = function (config) {
         basePath: '../',
         frameworks: ['jasmine'],
         files: [
-            '../../lib/angular/*.js',
-            '../../lib/angularExtras/*.js',
+            '../../lib/angular/angular.js',
+            '../../lib/angularExtras/angular-mocks.js',
             'testConfig/defaultMatchers.js',
             'testConfig/testStartup.js',
             'app/*.js',
