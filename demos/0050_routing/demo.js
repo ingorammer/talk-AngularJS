@@ -24,6 +24,9 @@ var mod = angular.module("demo", ["ngRoute"]).config(function ($routeProvider) {
 
 
 
+
+
+
 // this is the root controller for the whole application. It defines the shared data in the parent scope
 function DemoController($scope) {
    // Source: https://www-genesis.destatis.de - 31.12.2011 - incl shared German/Luxemburg area of 6.2 km^2

@@ -1,0 +1,11 @@
+<div class='my-expander-wrapper'>
+    <div class='my-expander-header'>{{title || 'Container/Wrapper!'}}
+        <a class='my-expander-iconlink' ng-show='!expanded' ng-click='expanded = true'>
+            <span class='glyphicon glyphicon-collapse-down'></span>
+        </a>
+        <a class='my-expander-iconlink' ng-show='expanded' ng-click='expanded = false'><span
+                class='glyphicon glyphicon-collapse-up'></span>
+        </a>
+    </div>
+    <div ng-show='expanded' class='my-expander-content' ng-transclude></div>
+</div>
