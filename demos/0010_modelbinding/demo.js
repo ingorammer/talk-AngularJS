@@ -13,7 +13,6 @@ function DemoController($scope) {
 
 Todo!
 
- - Bind the mode
  - Bind the button
  - Bind the button-state (enable/disable)
  - Show $apply

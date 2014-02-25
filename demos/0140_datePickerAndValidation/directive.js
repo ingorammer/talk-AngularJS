@@ -1,10 +1,10 @@
 angular.module("demo").directive('myDatepicker', function ($parse) {
 
-
    return {
       restrict: "EAC",
       replace: true,
       transclude: false,
+      template:"<input type='text'>",
       link: function (scope, element, attrs) {
          var ngModel = $parse(attrs.ngModel); // ng-model="user.firstname.foo[0].bla"
 

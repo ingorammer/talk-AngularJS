@@ -1,8 +1,14 @@
 var mod = angular.module("demo", []);
 
-function DemoController($scope, service2, service4) {
+/**
+ * @param $scope
+ * @param service3
+ * @param service4
+ * @constructor
+ */
+function DemoController($scope, service3, service4) {
    $scope.demo = function () {
-      service2.test();
+      service3.test();
    }
 
    $scope.demo2 = function () {
