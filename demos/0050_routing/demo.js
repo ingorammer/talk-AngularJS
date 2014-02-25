@@ -31,7 +31,7 @@ var mod = angular.module("demo", ["ngRoute"]).config(function ($routeProvider) {
 function DemoController($scope) {
    // Source: https://www-genesis.destatis.de - 31.12.2011 - incl shared German/Luxemburg area of 6.2 km^2
    $scope.states = [
-      {id: 1, name: "Baden-Württemberg", area: 35751.41},
+      {id: 1, name: "Baden-Wuerttemberg", area: 35751.41},
       {id: 2, name: "Bayern", area: 70550.19},
       {id: 3, name: "Berlin", area: 891.75},
       {id: 4, name: "Brandenburg", area: 29483.98},
@@ -46,7 +46,7 @@ function DemoController($scope) {
       {id: 13, name: "Sachsen", area: 18419.83},
       {id: 14, name: "Sachsen-Anhalt", area: 20450.29},
       {id: 15, name: "Schleswig-Holstein", area: 15799.57},
-      {id: 16, name: "Thüringen", area: 16172.50}
+      {id: 16, name: "Thueringen", area: 16172.50}
    ];
 
 

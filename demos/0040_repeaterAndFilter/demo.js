@@ -6,7 +6,7 @@ function DemoController($scope) {
 
    // Source: https://www-genesis.destatis.de - 31.12.2011 - incl shared German/Luxemburg area of 6.2 km^2
    $scope.states = [
-      {name: "Baden-Württemberg", area: 35751.41},
+      {name: "Baden-Wuerttemberg", area: 35751.41},
       {name: "Bayern", area: 70550.19},
       {name: "Berlin", area: 891.75},
       {name: "Brandenburg", area: 29483.98},
