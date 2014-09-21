@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS Demos</title>
+    <link rel=stylesheet href="/lib/bootstrap/css/bootstrap.css">
+    <link rel=stylesheet href="/demos/app.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<style>[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}</style>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div ng-app="demo" ng-controller="DemoController" >
+
+                <div ng-controller="ChildController1" ng-cloak>
+                    <input ng-model="params.text"> <button ng-click="send()" >Send</button>
+                    <ul>
+                        <li ng-repeat="item in items">{{item.text}} </li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <div ng-controller="ChildController2" ng-cloak>
+                    <input ng-model="params.text"> <button ng-click="send()" >Send</button>
+                    <ul>
+                        <li ng-repeat="item in items">{{item.text}} </li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+    <div class="row demofooter">
+        <hr>
+        <div class="col-md-12">
+            <a href="/">Back to demo list</a>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/lib/angular/angular.js"></script>
+<script src="demo.js"></script>
+</html>

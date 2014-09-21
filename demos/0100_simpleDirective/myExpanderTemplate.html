@@ -1,0 +1,10 @@
+<div class='my-expander-wrapper'>
+    <div class='my-expander-header'>
+        {{title || 'Container/Wrapper!'}}
+
+        <button ng-show="!isExpanded" ng-click="isExpanded = true">Anzeigen</button>
+        <button ng-show="isExpanded" ng-click="isExpanded = false">Verstecken</button>
+    </div>
+    <div ng-show="isExpanded" class='my-expander-content' ng-transclude>
+    </div>
+</div>

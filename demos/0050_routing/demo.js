@@ -1,5 +1,6 @@
 var mod = angular.module("demo", ["ngRoute"]).config(function ($routeProvider) {
 
+
    $routeProvider
       .when("/", { templateUrl: "Start.html" }) // we don't need a controller for this first one
       .when("/states/:query?", { templateUrl: "statelist.html", controller: "StateListController" })
@@ -7,6 +8,10 @@ var mod = angular.module("demo", ["ngRoute"]).config(function ($routeProvider) {
       .otherwise({ redirectTo: "/" });
 
 });
+
+
+
+
 
 
 
