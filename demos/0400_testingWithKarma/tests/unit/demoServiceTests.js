@@ -17,7 +17,7 @@
          it('adds two numbers', inject(function () {
 
             var res = demoService.addNumbers(4, 5);
-            expect(9).toBe(res);
+            expect(res).toBe(9);
          }));
       });
    });

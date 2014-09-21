@@ -7,7 +7,9 @@
     <link rel=stylesheet href="/lib/jquery-ui/css/ui-lightness/jquery-ui-1.10.3.custom.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
-<style>[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {display: none !important;}</style>
+<style>[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}</style>
 <body>
 <div class="container">
     <div class="row">
@@ -28,58 +30,67 @@
                         <label class="col-md-2 control-label" for="userName">Name</label>
 
                         <div class="col-md-4">
-                            <input required type="text" ng-model="user.name" class="form-control" id="userName">
+                            <input required type="text" ng-model="user.name" class="form-control" id="userName" name="userName">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label class="col-md-2 control-label" for="userPhone">Phone Number</label>
+
                         <div class="col-md-4">
-                            <input type="text" ng-model="user.phone" class="form-control" id="userPhone">
+                            <input type="text" ng-model="user.phone" class="form-control" id="userPhone" name="userPhone">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label class="col-md-2 control-label" for="userEmail">Email</label>
+
                         <div class="col-md-4">
-                            <input required type="email" ng-model="user.email" class="form-control" id="userEmail">
+                            <input required type="email" ng-model="user.email" class="form-control" id="userEmail" name="userEmail">
                         </div>
                     </div>
 
 
                     <div class="form-group">
                         <label class="col-md-2 control-label">Date of Birth</label>
+
                         <div class="col-md-4">
-
-
-
 
                             <my-datepicker
                                     ng-model="user.dateOfBirth"
-                                    class="form-control" />
-
-
-
-
-
-
-                            <!--
-
-                            <input type="text" my-datepicker ng-model="user.dateOfBirth" class="form-control" id="userDateOfBirth">
--->
+                                    class="form-control"
+                                    name="dateOfBirth"
+                                    ></my-datepicker>
                         </div>
 
                     </div>
 
                     <div class="form-group">
                         <label class="col-md-2 control-label"></label>
+
                         <div class="col-md-4">
-                            <button class="btn btn-default" ng-click="continue()" ng-disabled="newUserForm.$invalid">Continue</button>
+                            <button class="btn btn-default" ng-click="continue()" ng-disabled="newUserForm.$invalid">
+                                Continue
+                            </button>
                             <button class="btn" ng-click="cancel()">Cancel</button>
                         </div>
                     </div>
                 </form>
 
+                <div ng-messages="newUserForm.userName.$error">
+                    <div ng-message="required">
+                        Please enter the user's name
+                    </div>
+                </div>
+
+                <div ng-messages="newUserForm.userEmail.$error">
+                    <div ng-message="required">
+                        Please enter the user's email address
+                    </div>
+                    <div ng-message="email">
+                        The email address is in an incorrect format
+                    </div>
+                </div>
 
                 <!-- demo ends here -->
 
@@ -98,6 +109,7 @@
 <script src="/lib/jquery/jquery.js"></script>
 <script src="/lib/jquery-ui/js/jquery-ui-1.10.3.custom.js"></script>
 <script src="/lib/angular/angular.js"></script>
+<script src="/lib/angularExtras/angular-messages.js"></script>
 <script src="/lib/globalize/globalize.js"></script>
 <script src="legacyHelpers.js"></script>
 <script src="demo.js"></script>

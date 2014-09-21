@@ -40,7 +40,6 @@ angular.module("demo").service("service3", function Service3() {
 
 
 
-
 // INSTEAD, we can use a different way to specify the service. The second parameter is an array
 // in this case. The array lists the *names* of the services to be injected. The last element of
 // the array is the function to call.
@@ -54,4 +53,4 @@ angular.module("demo").service("service4", ["service1", function Service4(servic
 
 // When minified, this will turn into this. This version is called from the application
 
-angular.module("demo").service("service4",["service1",function(a){this.test=function(){alert("this is from service4 (minified)."),a.test()}}]);
+angular.module("demo").service("service4",["service1",function(a){this.test=function(){alert("this is from service4 (minified).");a.test()}}]);

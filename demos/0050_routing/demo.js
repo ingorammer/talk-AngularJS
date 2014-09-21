@@ -1,12 +1,12 @@
-var mod = angular.module("demo", ["ngRoute"]).config(function ($routeProvider) {
+var mod = angular.module("demo", ["ngRoute"]);
 
 
-   $routeProvider
+mod.config(function ($routeProvider) {
+$routeProvider
       .when("/", { templateUrl: "Start.html" }) // we don't need a controller for this first one
       .when("/states/:query?", { templateUrl: "statelist.html", controller: "StateListController" })
       .when("/state/:id", { templateUrl: "state.html", controller: "StateController" })
       .otherwise({ redirectTo: "/" });
-
 });
 
 
@@ -33,7 +33,7 @@ var mod = angular.module("demo", ["ngRoute"]).config(function ($routeProvider) {
 
 
 // this is the root controller for the whole application. It defines the shared data in the parent scope
-function DemoController($scope) {
+mod.controller("DemoController", function DemoController($scope) {
    // Source: https://www-genesis.destatis.de - 31.12.2011 - incl shared German/Luxemburg area of 6.2 km^2
    $scope.states = [
       {id: 1, name: "Baden-Wuerttemberg", area: 35751.41},
@@ -55,4 +55,4 @@ function DemoController($scope) {
    ];
 
 
-}
+});

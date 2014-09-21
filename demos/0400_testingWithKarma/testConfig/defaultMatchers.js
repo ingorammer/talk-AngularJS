@@ -1,17 +1,19 @@
 (function () {
    "use strict";
 
-   beforeEach(function () {
-      var matchers = {
-         toBeJsonEqual: function (expected) {
-            var one = JSON.stringify(this.actual),
-               two = JSON.stringify(expected);
+   window.customMatchers = {
+      toBeJsonEqual: function () {
+         return {
+            compare: function (actual, expected) {
+               var one = angular.toJson(actual),
+                  two = angular.toJson(expected);
 
-            return one === two;
-         }
-      };
-      this.addMatchers(matchers);
-   });
-
+               return {
+                  pass: one === two
+               };
+            }
+         };
+      }
+   };
 
 })();

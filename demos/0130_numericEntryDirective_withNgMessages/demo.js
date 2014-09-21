@@ -1,4 +1,4 @@
-var mod = angular.module("demo", []);
+var mod = angular.module("demo", ["ngMessages"]);
 
 mod.controller("DemoController", function DemoController($scope) {
    $scope.input = {};

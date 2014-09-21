@@ -1,9 +1,8 @@
 var mod = angular.module("demo", ["ngAnimate"]);
 
-function DemoController($scope) {
+mod.controller("DemoController", function DemoController($scope) {
    $scope.query = {name: ""};
    $scope.sort = {predicate: "name"};
-
 
 
    // Source: https://www-genesis.destatis.de - 31.12.2011 - incl shared German/Luxemburg area of 6.2 km^2
@@ -25,4 +24,4 @@ function DemoController($scope) {
       {name: "Schleswig-Holstein", area: 15799.57},
       {name: "Thüringen", area: 16172.50}
    ];
-}
+});

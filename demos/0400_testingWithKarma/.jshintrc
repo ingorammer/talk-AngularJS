@@ -17,5 +17,5 @@
    "browser": true,
    "devel": true,
    "jquery": true,
-   "globals": ["_", "describe", "beforeEach", "afterEach", "it", "inject", "module", "expect", "angular", "$app", "defaultData", "appMocks"]
+   "globals": ["_", "describe", "beforeEach", "afterEach", "it", "inject", "module", "expect", "angular", "$app", "defaultData", "appMocks", "jasmine"]
 }

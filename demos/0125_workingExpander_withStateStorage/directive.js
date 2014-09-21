@@ -13,7 +13,6 @@ mod.controller("myExpanderController", function ($scope, $window) {
       }
    };
 
-
    if ($scope.storageKey) {
       $scope.expanded = $window.localStorage.getItem("EXPANDER_" + $scope.storageKey);
    }

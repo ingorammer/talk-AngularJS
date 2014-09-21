@@ -3,6 +3,7 @@
 
 
    beforeEach(module('demo', function ($provide) {
+      jasmine.addMatchers(window.customMatchers);
       // Here, you could inject alternative implementations for mocking:
       // $provide.service("securityService", appMocks.FakeSecurityService);
       $provide.value("serviceBaseUrl", "http://test.example.com");

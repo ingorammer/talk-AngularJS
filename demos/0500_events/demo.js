@@ -1,10 +1,10 @@
 var mod = angular.module("demo", []);
 
-function DemoController($scope) {
+mod.controller("DemoController", function DemoController($scope) {
    $scope.items = [];
-}
+});
 
-function ChildController1($scope, $rootScope) {
+mod.controller("ChildController1", function ChildController1($scope, $rootScope) {
    $scope.params = {};
    $scope.items = [];
 
@@ -15,9 +15,9 @@ function ChildController1($scope, $rootScope) {
    $rootScope.$on("message", function (event, data) {
       $scope.items.push({text: data});
    });
-}
+});
 
-function ChildController2($scope, $rootScope) {
+mod.controller("ChildController2", function ChildController2($scope, $rootScope) {
    $scope.params = {};
    $scope.items = [];
 
@@ -29,4 +29,4 @@ function ChildController2($scope, $rootScope) {
       $scope.items.push({text: data});
    });
 
-}
+});

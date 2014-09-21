@@ -1,5 +1,5 @@
 var mod = angular.module("demo", []);
 
-function DemoController($scope) {
-}
+mod.controller("DemoController", function DemoController($scope) {
+});
 

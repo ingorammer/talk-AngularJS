@@ -1,14 +1,14 @@
 var mod = angular.module("demo", []);
 
-function DemoController($scope) {
+mod.controller("DemoController", function DemoController($scope) {
    $scope.user = new UserModel("John", "F.", "Doe");
 
    // note: only a performance-optimization if calculateFullName() is complex!
 
-   $scope.$watch("user.firstName + user.middle + user.lastName", function(){
+   $scope.$watch("user.firstName + user.middle + user.lastName", function () {
       $scope.user.calculateFullName();
    });
-}
+});
 
 function UserModel(first, middle, last) {
    this.firstName = first;

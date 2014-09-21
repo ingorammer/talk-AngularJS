@@ -1,5 +1,3 @@
-// alternative declaration instead of just "function StateListController"
-
 angular.module("demo").controller("StateListController",
     function ($scope, $location, $routeParams) {
 

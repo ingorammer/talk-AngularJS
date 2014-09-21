@@ -1,11 +1,4 @@
 angular.module("demo").directive('myDatepicker', function ($parse) {
-
-
-
-
-
-
-
     // my-datepicker
     // myDatepicker
 
@@ -14,25 +7,12 @@ angular.module("demo").directive('myDatepicker', function ($parse) {
       replace: true,
       template:"<input type='text'>",
       link: function (scope, element, attrs) {
-
-
-
-
-
-
-
-
          var ngModel = $parse(attrs.ngModel); // ng-model="user.dateOfBirth"
-
-
-
-
 
          scope.$watch(ngModel, function (val) {
             var date = myHelpers.safeGetDate(val);
             element.datepicker("setDate", date);
          });
-
 
          var processChange = function () {
             var date = myHelpers.isoStringFromDate(element.datepicker("getDate"));
@@ -44,9 +24,6 @@ angular.module("demo").directive('myDatepicker', function ($parse) {
                element.datepicker("setDate", newVal);
             });
          };
-
-
-
 
          element.datepicker({
             inline: true,

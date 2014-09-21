@@ -1,6 +1,6 @@
-var mod = angular.module("demo", []);
+var mod = angular.module("demo", ["ngMessages"]);
 
-function DemoController($scope) {
+mod.controller("DemoController", function DemoController($scope) {
    $scope.continue = function () {
       alert("Continuing to next step ...")
    };
@@ -8,5 +8,5 @@ function DemoController($scope) {
    $scope.cancel = function () {
       alert("Cancelling step ...")
    };
-}
+});
 

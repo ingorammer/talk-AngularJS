@@ -1,6 +1,6 @@
 var mod = angular.module("demo", []);
 
-function DemoController($scope) {
+mod.controller("DemoController", function DemoController($scope) {
    $scope.query = {name: ""};
    $scope.sort = {predicate: "name", reverse: false};
 
@@ -48,4 +48,4 @@ function DemoController($scope) {
        }, 500);
        */
    }
-}
+});

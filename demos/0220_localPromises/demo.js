@@ -1,10 +1,9 @@
-var mod = angular.module("demo", ["ngResource"]);
+var mod = angular.module("demo", []);
 
-function DemoController($scope, statesService) {
+
+mod.controller("DemoController", function DemoController($scope, statesService) {
    $scope.query = {name: ""};
    $scope.sort = {predicate: "name", reverse: false};
-
-   $scope.data = statesService.getAllStates();
 
    statesService.getAllStates().then(function (data) {
       $scope.data = data;
@@ -20,4 +19,4 @@ function DemoController($scope, statesService) {
     alert("Received progress update: " + update);
     })
     */
-}
+});

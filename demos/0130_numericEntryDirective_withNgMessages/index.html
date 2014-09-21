@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS Demos</title>
+    <link rel=stylesheet href="/lib/bootstrap/css/bootstrap.css">
+    <link rel=stylesheet href="/demos/app.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<style>[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {display: none !important;}</style>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div ng-app="demo" ng-controller="DemoController" ng-cloak>
+
+                <!-- demo starts here -->
+
+                <div class="page-header">
+                    <h1>Numeric Entry Directive with ngMessages</h1>
+                </div>
+                <p class="lead">
+                    a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>
+                </p>
+
+                <h2>Values</h2>
+
+                <form class="form-inline" role="form" name="calculationForm">
+                    <div class="form-group">
+                        <label for="valueA">a</label>
+                        <input my-float type="text" class="form-control" name="valueA" id="valueA" ng-model="input.a">
+                    </div>
+                    <div class="form-group">
+                        <label for="valueB">b</label>
+                        <input my-float type="text" class="form-control" name="valueB" id="valueB" ng-model="input.b">
+                    </div>
+                    <div class="form-group">
+                        <label>c</label>
+                        <input type="text" readonly class="form-control" id="valueC" value="{{calculationResult()}}">
+                    </div>
+
+                </form>
+
+                <div ng-messages="calculationForm.valueA.$error">
+                    <div ng-message="notANumber">
+                        The value for 'a' is not a valid number
+                    </div>
+                </div>
+                <div ng-messages="calculationForm.valueB.$error">
+                    <div ng-message="notANumber">
+                        The value for 'b' is not a valid number
+                    </div>
+                </div>
+                <!-- demo ends here -->
+
+            </div>
+        </div>
+    </div>
+    <div class="row demofooter">
+        <hr>
+        <div class="col-md-12">
+            <a href="/">Back to demo list</a>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/lib/angular/angular.js"></script>
+<script src="/lib/angularExtras/angular-messages.js"></script>
+<script src="/lib/globalize/globalize.js"></script>
+<script src="demo.js"></script>
+<script src="directive.js"></script>
+</html>
+

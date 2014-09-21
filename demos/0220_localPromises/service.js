@@ -1,13 +1,14 @@
-angular.module("demo").factory("statesService", function ($rootScope, $q) {
+(function () {
    "use strict";
 
-   var stateDummyData = {states: [
-      {name: "Test #1", area: 42},
-      {name: "Test #2", area: 56}
-   ]};
+   function StatesService($rootScope, $q) {
 
-   return {
-      getAllStates: function () {
+      var stateDummyData = {states: [
+         {name: "Test #1", area: 42},
+         {name: "Test #2", area: 56}
+      ]};
+
+      this.getAllStates = function () {
          var def = $q.defer();
 
          window.setTimeout(function () {
@@ -18,7 +19,10 @@ angular.module("demo").factory("statesService", function ($rootScope, $q) {
          }, 1000);
 
          return def.promise;
-      }
-   };
+      };
 
-});
+   }
+
+   angular.module("demo").service("statesService", StatesService);
+})();
+
