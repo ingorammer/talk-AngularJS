@@ -42,7 +42,7 @@
                             <a href="" ng-click="sort.predicate='area'; sort.reverse=!sort.reverse">Area</a>
                         </th>
                     </tr>
-                    <tr ng-repeat="state in data.states|filter: query|orderBy:sort.predicate:sort.reverse">
+                    <tr ng-repeat="state in states|filter: query|orderBy:sort.predicate:sort.reverse">
                         <td>
                             {{state.name}}
                         </td>

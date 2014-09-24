@@ -11,7 +11,7 @@ mod.controller("DemoController",
       $scope.sort = {predicate: "name", reverse: false};
 
       statesService.getAllStates().then(function (states) {
-         $scope.data = states;
+         $scope.states = states;
       });
    });
 
