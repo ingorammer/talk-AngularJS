@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS Demos</title>
+    <link rel=stylesheet href="/lib/bootstrap/css/bootstrap.css">
+    <link rel=stylesheet href="/demos/app.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<style>[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}</style>
+<body>
+<div class="container">
+    <!-- demo starts here -->
+
+
+    <div ng-app="demo" ng-controller="DemoController" ng-cloak>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-header">
+                    <h1>Tables with ng-repeat</h1>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <table class="table table-striped resultArea">
+                    <tr>
+                        <th>
+                            Name
+                        </th>
+                        <th class="text-right">
+                            Area
+                        </th>
+                        <th class="text-right">
+                        </th>
+                    </tr>
+
+                    <tr ng-repeat="state in states">
+                        <td>
+                            {{state.name}}
+                        </td>
+                        <td class="text-right">
+                            {{state.area|number:2}}
+                        </td>
+                        <td class="text-right">
+                            <button class="btn btn-primary btn-xs" ng-click="doSomething(state)">Do Something!</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- demo ends here -->
+
+
+    </div>
+    <div class="row demofooter">
+        <div class="description">
+            This demo shows:
+            <ul>
+                <li>ng-repeat</li>
+                <li>input filtering (with ng-repeat's "|filter:...")</li>
+                <li>output filtering (with "|number:2")</li>
+            </ul>
+        </div>
+        <hr>
+        <div class="col-md-12">
+            <a href="/">Back to demo list</a>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/lib/angular/angular.js"></script>
+<script src="demo.js"></script>
+</html>
